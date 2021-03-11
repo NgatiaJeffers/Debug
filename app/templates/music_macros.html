@@ -1,0 +1,20 @@
+{% macro displayMusicObject(music_object) %}
+
+    {% for music in music_object %}
+            <!-- Gallery item -->
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mt-4">
+                <div class="bg-white rounded shadow-sm"><img src="{{ music.image }}" class="card-img-top img-responsive" alt="{{ music.name }} poster"/>
+                <div class="p-4">
+                    <h6 class="card-title"> <a href="{{ music.url }}">{{ music.name|truncate(20)}}</a> </h6>
+                    <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+                    <p class="small mb-0"><span class="font-weight-bold">{{ music.playcount }}songs</span></p>
+                    <div class="badge badge-danger px-3 rounded-pill font-weight-normal">{{ music.listeners}} V</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- End -->
+
+    {% endfor %}
+
+{% endmacro %}

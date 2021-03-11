@@ -1,0 +1,6 @@
+export LAST_API_KEY=65e3d41e794db86fa84156ddb7f7a4c2
+export SECRET_KEY=57b63acc9692f176cb90fe71587f402e
+
+
+
+python3 manage.py server
